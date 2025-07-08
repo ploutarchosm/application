@@ -29,7 +29,9 @@ export class AppConfigDto {
 }
 
 export function validateAppConfig(config: Record<string, any>): AppConfigDto {
-    const validatedConfig = plainToClass(AppConfigDto, config);
+    const validatedConfig = plainToClass(AppConfigDto, config, {
+        enableImplicitConversion: true,
+    });
     const errors = validateSync(validatedConfig, { skipMissingProperties: false });
 
     if (errors.length > 0) {

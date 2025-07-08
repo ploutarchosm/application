@@ -23,7 +23,7 @@ export class Application {
        this.apiPrefix = apiPrefix;
    }
 
-   async run(appModule: Type<NestModule>, delegate?: ApplicationConfigurationDelegate): Promise<void> {
+   async run(appModule: Type<any>, delegate?: ApplicationConfigurationDelegate): Promise<void> {
 
        try {
            this.application = await NestFactory.create<NestExpressApplication>(appModule, {
