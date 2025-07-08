@@ -1,6 +1,6 @@
 {
   "name": "@ploutos/application",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Application Configuration and Application Factory for Nest.js",
   "author": "Ploutarchos Michaelides",
   "license": "MIT",
