@@ -1,7 +1,8 @@
-import { Module, OnModuleInit, Logger, DynamicModule } from '@nestjs/common';
+import { Module, OnModuleInit, Logger, DynamicModule, Global } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import {AppConfigDto, validateAppConfig} from "./dto/app-config.dto";
+import { AppConfigDto, validateAppConfig } from "./dto/app-config.dto";
 
+@Global()
 @Module({})
 export class ApplicationConfigModule implements OnModuleInit {
     private readonly logger = new Logger(ApplicationConfigModule.name);
@@ -30,6 +31,7 @@ export class ApplicationConfigModule implements OnModuleInit {
                 },
             ],
             exports: ['APP_CONFIG'],
+            global: true,
         };
     }
 
