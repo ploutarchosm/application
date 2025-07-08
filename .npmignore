@@ -1,0 +1,13 @@
+# source
+src
+test
+.gitignore
+.prettierrc
+nest-cli.json
+tsconfig.json
+tsconfig.build.json
+
+# misc
+.git
+.DS_Store
+*.log
