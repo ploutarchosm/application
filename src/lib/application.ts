@@ -1,5 +1,5 @@
 import { NestExpressApplication } from "@nestjs/platform-express";
-import { Logger, NestModule, Type } from "@nestjs/common";
+import { Logger, Type } from "@nestjs/common";
 import { HttpAdapterHost, NestFactory } from "@nestjs/core";
 import { useContainer } from "class-validator";
 import { ConfigService } from '@nestjs/config';
@@ -12,7 +12,6 @@ import { SentryAllExceptionFilter } from "./filters/sentry-all-exception.filter"
 declare type ApplicationConfigurationDelegate = (
     app: NestExpressApplication
 ) => void;
-
 
 export class Application {
    private application: NestExpressApplication | undefined;
